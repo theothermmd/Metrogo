@@ -8,8 +8,6 @@ import axios from 'axios';
 
 
 
-
-
 async function getText (source, dist) {
     try {
     const response = await axios.post('http://127.0.0.1:5000/getbestpath', {
@@ -39,10 +37,11 @@ export default async function Show({ searchParams }) {
 
     let sources = searchParams.source;
     let dists = searchParams.dist;
-
+    var dataArray;
+    
     try {
         const datas = await getText(searchParams.source,searchParams.dist);
-        const dataArray = Object.entries(datas).map(([key, value]) => ({
+        dataArray = Object.entries(datas).map(([key, value]) => ({
             id: key,
             name: value
           }));
@@ -63,10 +62,10 @@ export default async function Show({ searchParams }) {
 
     return (
         <div className=" container w-full h-dvh text-white flex flex-col justify-center items-center mx-auto px-8">
-            <div className=' w-full text-center overflow-scroll h-[500px] no-scrollbar rounded-3xl snap-center select-none ring-2 ring-slate-700' >
+            <div className=' w-full text-center overflow-scroll h-[500px] no-scrollbar snap-center select-none p-4 rounded-3xl' >
 
                 {dataArray.map(item => (
-                                <div className=' bg-slate-900 py-8 text-2xl ' key={item.id}>{item.name}</div>
+                                <div className=' bg-slate-900 py-8 text-2xl ring-2 ring-slate-600  rounded-md my-8' key={item.id}>{item.name}</div>
                             ))}
 
             </div>

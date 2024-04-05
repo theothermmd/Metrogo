@@ -7,7 +7,7 @@ import mashhad from './mashhad.webp'
 function Maps() {
     return ( 
         <div className="container w-full h-dvh flex flex-col justify-center items-center  md:mx-auto select-none">
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-2 h-[500px] overflow-scroll md:overflow-auto">
+            <div className="grid md:grid-cols-2 grid-cols-2 gap-2 h-[500px] overflow-hidden md:overflow-auto">
 
                 <div className="relative flex justify-center items-center">
                     <Image src={tehran} alt="Metrogo Logo" width={200} height={200} className="brightness-50 blur-[2px]"/>

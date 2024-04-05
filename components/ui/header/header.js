@@ -13,11 +13,11 @@ export default function Header() {
 
 
   return (
-    <header className="absolute top-0 left-0 right-0 container flex  flex-row-reverse items-center justify-between p-12 h-12 mx-auto md:rounded-md select-none ">
-      <div className="flex items-center gap-10 flex-row-reverse hover:cursor-pointer">
+    <header className="absolute top-0 left-0 right-0 container flex flex-row-reverse items-center justify-between p-12 h-12 mx-auto select-none ">
+      <div className="flex items-center gap-10 flex-row-reverse">
         <a
           href="/"
-          className="flex gap-2 flex-row-reverse items-center z-30  group"
+          className="flex gap-2 flex-row-reverse items-center z-30 group"
         >
           <Image src={logo} alt="Metrogo Logo" width={38} height={38} />
           <h1 className="hidden lg:inline-block text-slate-500 group-hover:text-black dark:text-slate-200 dark:group-hover:text-white">
@@ -31,12 +31,6 @@ export default function Header() {
               className=" hover:text-black dark:hover:text-white  transition-all"
             >
               نقشه های مترو ایران
-            </a>
-            <a
-              href="#"
-              className=" hover:text-black dark:hover:text-white  transition-all"
-            >
-              تغییرات اخیر
             </a>
             <a
               href="/about"
@@ -81,7 +75,7 @@ export default function Header() {
       </svg>
 
 
-      <a className="hidden lg:inline-flex cursor-pointer justify-center gap-2 text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2">
+      <a href="https://github.com/mohamadrzm/metrogo" className="hidden lg:inline-flex cursor-pointer justify-center gap-2 text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2">
         <svg
           className="dark:invert"
           xmlns="http://www.w3.org/2000/svg"
