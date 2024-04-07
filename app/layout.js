@@ -1,4 +1,4 @@
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 import Header from '@/components/ui/header/header'
 import Footer from '@/components/ui/footer/footer'
@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header/>
         {children}
+        <SpeedInsights />
         <Footer/>
         </body>
     </html>
