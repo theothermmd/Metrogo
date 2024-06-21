@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html className=" dark:bg-slate-950 bg-slate-50 scroll-smooth" lang="en">
       <head>
 
-      <meta property="og:title" content="مکس" />
+      <meta property="og:title" content="متروگو" />
       <meta property="og:url" content="https://metrogo.vercel.app/" />
       <meta property="og:image" content="./banner.png" />
 
