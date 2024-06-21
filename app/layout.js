@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
 
       <meta property="og:title" content="متروگو" />
       <meta property="og:url" content="https://metrogo.vercel.app/" />
-      <meta property="og:image" content="./banner.png" />
+      <meta property="og:image" content="./favicon.ico" />
 
       </head>
 
