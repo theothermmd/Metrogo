@@ -83,31 +83,73 @@ http://127.0.0.1:8000/v1/routing/get_route?source=%D9%86%D8%A8%D8%B1%D8%AF&desti
 ```
 
 > [!NOTE]  
-> You may be wondering what %D9%86%D8%A8%D8%B1%D8%AF& is?
+> You may be wondering what %D9%85%D9%86%DB%8C%D8%B1%DB%8C%D9%87 is?
 >
-> To send Persian words to the API, we need to format the words or data as URL-encoded.
-> For example, %D9%86%D8%A8%D8%B1%D8%AF& is the formatted form of the word "battle".
-
+> To send Persian words to the API, we need to format the words or data as **URL-encoded**.
+> For example, %D9%85%D9%86%DB%8C%D8%B1%DB%8C%D9%87 is the formatted form of the word "منیریه".
 
 > [!TIP]
 > What does each part of this example send?
 >
-> The source parameter specifies the source station
+> The **source** parameter specifies the source station
 >
-> The destination parameter specifies the destination station
+> The **destination** parameter specifies the destination station
 >
-> The type_of_day parameter specifies the type of day, which can be normal, i.e. 
-> Saturday to Wednesday or Thursday or Friday. The type of day affects the train 
-> schedule. If you leave this parameter blank, it will be considered a normal day by 
-> default
+> The **type_of_day** parameter specifies the type of day, which can be normal, i.e.
+> Saturday to Wednesday or Thursday or Friday. The type of day affects the train
+> schedule. **If you leave this parameter blank, it will be considered a normal day by default**
 >
-> The time parameter specifies the time you will enter the metro, which you can enter 
-> manually. If you leave this parameter blank, it will be considered the current time 
-> by default.
+> The **time** parameter specifies the time you will enter the metro, which you can enter
+> manually. **If you leave this parameter blank, it will be considered the current time by default.**
 
 After entering this example into your httpie application or even your regular browser, you will receive the following result from the API:
 
+```json
+{
+  "status": true,
+  "isrouting": true,
+  "route": [
+    {
+      "station_name": "منیریه",
+      "time": "10:34",
+      "color": null,
+      "is_line_change": false,
+      "message": ""
+    },
+    {
+      "station_name": "تئاتر شهر",
+      "time": "10:40",
+      "color": null,
+      "is_line_change": true,
+      "message": "در ایستگاه تئاتر شهر از قطار پیاده شده و به سمت قائم جهت تغییر خط به 4 اقدام کنید."
+    },
+    {
+      "station_name": "تئاتر شهر",
+      "time": "10:41",
+      "color": null,
+      "is_line_change": false,
+      "message": ""
+    },
+    {
+      "station_name": "فردوسی",
+      "time": "10:45",
+      "color": null,
+      "is_line_change": false,
+      "message": ""
+    }
+  ],
+  "travel_duration": "00:15",
+  "travel_distance": "33.824",
+  "travel_guide": [
+    "در ایستگاه منیریه وارد خط 3 شوید و به سمت قائم سوار مترو شوید.",
+    "در ایستگاه تئاتر شهر از مترو پیاده شوید. سپس وارد خط 4 شده و به سمت قائم سوار مترو شوید.",
+    "در ایستگاه فردوسی از مترو پیاده شوید و از ایستگاه خارج شوید."
+  ],
+  "next_train": "4",
+  "arrival_time": "10:45"
+}
 
+```
 
 ## Participation in development
 
