@@ -57,22 +57,20 @@ The MetroGo server is listening to you on [127.0.0.1:8000](http://127.0.0.1:8000
 > You can use [httpie](https://httpie.io/) or [postman](https://www.postman.com/downloads/) to request the Metrogo API, depending on your convenience. **httpie is recommended.**
 ## Participation in development
 
-Are you interested in Metrogo? Read this document and **we welcome you :)**
+Are you interested in Metrogo? [Read this document](./docs/development.md) and **we welcome you :)**
 
 ## Special thanks
 
 Very special thanks. to [@Mostafa-Kheibary](https://github.com/mostafa-kheibary) for the [tehran-metro-data](https://github.com/mostafa-kheibary/tehran-metro-data) project
+
 Also special thanks to Tehran [Metro Company](https://metro.tehran.ir/)
+
 ## Frequently asked questions
 
 > [!CAUTION]
-> ##### Can I use this project in commercial projects?
-> Yes. You can. But you should know that it is true that the metro train schedule is from the official source of the metro company, but according to the experience and feedback of others, trains do not always arrive at the station on time due to technical problems or passengers preventing the train from moving.
+> ##### **Can I use this project in commercial projects?**
+> **Yes. You can.** But you should know that it is true that the metro train schedule is from the official source of the metro company, **but according to the experience and feedback of others, trains do not always arrive at the station on time due to technical problems or passengers preventing the train from moving.**
 
-##### How can I add MetroGo to my project?
+##### **How can I add MetroGo to my project?**
 
-Metrogo is not only a regular program, but also a Python package. Move the metrogo folder into your project and use Metrogo like any other Python package.
-
-
-
-
+**Metrogo is not only a regular program**, but also a Python package. Move the metrogo folder into your project and use Metrogo like any other Python package.
