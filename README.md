@@ -77,14 +77,37 @@ The MetroGo server is listening to you on [127.0.0.1:8000](http://127.0.0.1:8000
 > You can use [httpie](https://httpie.io/) or [postman](https://www.postman.com/downloads/) to request the Metrogo API, depending on your convenience. **httpie is recommended.**
 
 For routing, you need to send your data to the API in the form of Query Parameters using the GET method. Take a look at the following example:
-> [!NOTE]  
-> You may be wondering what %D9%86%D8%A8%D8%B1%D8%AF& is?
-> To send Persian words to the API, we need to format the words or data as URL-encoded.
-> For example, %D9%86%D8%A8%D8%B1%D8%AF& is the formatted form of the word "battle".
 
 ```URL
 http://127.0.0.1:8000/v1/routing/get_route?source=%D9%86%D8%A8%D8%B1%D8%AF&destination=%D8%AA%D8%A6%D8%A7%D8%AA%D8%B1%D8%B4%D9%87%D8%B1%&type_of_day=%D8%B9%D8%A7%D8%AF%DB%8C&time=10:30
 ```
+
+> [!NOTE]  
+> You may be wondering what %D9%86%D8%A8%D8%B1%D8%AF& is?
+>
+> To send Persian words to the API, we need to format the words or data as URL-encoded.
+> For example, %D9%86%D8%A8%D8%B1%D8%AF& is the formatted form of the word "battle".
+
+
+> [!TIP]
+> What does each part of this example send?
+>
+> The source parameter specifies the source station
+>
+> The destination parameter specifies the destination station
+>
+> The type_of_day parameter specifies the type of day, which can be normal, i.e. 
+> Saturday to Wednesday or Thursday or Friday. The type of day affects the train 
+> schedule. If you leave this parameter blank, it will be considered a normal day by 
+> default
+>
+> The time parameter specifies the time you will enter the metro, which you can enter 
+> manually. If you leave this parameter blank, it will be considered the current time 
+> by default.
+
+After entering this example into your httpie application or even your regular browser, you will receive the following result from the API:
+
+
 
 ## Participation in development
 
