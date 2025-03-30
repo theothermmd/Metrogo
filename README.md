@@ -39,10 +39,30 @@ Enter the project directory with the following command:
 cd Metrogo
 ```
 
+Create the Python virtual environment with the following commands or activate it if you already have one:
+
+```bash
+# Create python virtual environment
+python3 -m venv metrogo
+
+# Active python virtual environment in Linux/Mac
+source metrogo/bin/activate
+
+# Active python virtual environment in Windows
+metrogo\Scripts\activate
+
+```
+
 Install Metrogo prerequisites with the following command:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Create the database with the following command:
+
+```bash
+python -m metrogo.utils.Excel_extractors.db_factory
 ```
 
 Run the Metrogo API server with the following command:
@@ -55,6 +75,17 @@ The MetroGo server is listening to you on [127.0.0.1:8000](http://127.0.0.1:8000
 
 > [!TIP]
 > You can use [httpie](https://httpie.io/) or [postman](https://www.postman.com/downloads/) to request the Metrogo API, depending on your convenience. **httpie is recommended.**
+
+For routing, you need to send your data to the API in the form of Query Parameters using the GET method. Take a look at the following example:
+> [!NOTE]  
+> You may be wondering what %D9%86%D8%A8%D8%B1%D8%AF& is?
+> To send Persian words to the API, we need to format the words or data as URL-encoded.
+> For example, %D9%86%D8%A8%D8%B1%D8%AF& is the formatted form of the word "battle".
+
+```URL
+http://127.0.0.1:8000/v1/routing/get_route?source=%D9%86%D8%A8%D8%B1%D8%AF&destination=%D8%AA%D8%A6%D8%A7%D8%AA%D8%B1%D8%B4%D9%87%D8%B1%&type_of_day=%D8%B9%D8%A7%D8%AF%DB%8C&time=10:30
+```
+
 ## Participation in development
 
 Are you interested in Metrogo? [Read this document](./docs/development.md) and **we welcome you :)**
