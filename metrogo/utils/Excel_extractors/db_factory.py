@@ -2,25 +2,6 @@ from pathlib import Path
 import json
 
 
-def correct_persian_text(text: str) -> str:
-	translation_map = str.maketrans(
-		{
-			'ي': 'ی',
-			'ك': 'ک',
-			'ە': 'ه',
-			'إ': 'ا',
-			'ؤ': 'و',
-			'ء': '',
-			'ة': 'ه',
-			'٫': '.',
-			'٬': ',',
-			'ّ': '',
-			'\u200c': ' ',
-		}
-	)
-	return text.translate(translation_map)
-
-
 def run():
 	import metrogo.utils.Excel_extractors.extractors.line_1 as line_1
 	import metrogo.utils.Excel_extractors.extractors.line_2 as line_2
@@ -102,37 +83,6 @@ def run():
 				'true', 'True'
 			).replace('false', 'False')
 		)
-
-	# line_1 = [correct_persian_text(i) for i in line_1.line_1()]
-	# line_2 = [correct_persian_text(i) for i in line_2.line_2()]
-	# line_3 = [correct_persian_text(i) for i in line_3.line_3()]
-	# line_4 = [correct_persian_text(i) for i in line_4.line_4()]
-	# line_5 = [correct_persian_text(i) for i in line_5.line_5()]
-	# line_6 = [correct_persian_text(i) for i in line_6.line_6()]
-	# line_7 = [correct_persian_text(i) for i in line_7.line_7()]
-	# line_parand = [correct_persian_text(i) for i in parand.parand()]
-	# line_mehrabad = [correct_persian_text(i) for i in mehrabad.mehrabad()]
-	# line_hashtgerd = [correct_persian_text(i) for i in hashtgerd.hashtgerd()]
-
-	# x = {
-	# 	"stations": {
-	# 		"line_1": line_1,
-	# 		"line_parand": line_parand,
-	# 		"line_2": line_2,
-	# 		"line_3": line_3,
-	# 		"line_4": line_4,
-	# 		"line_mehrabad": line_mehrabad,
-	# 		"line_5": line_5,
-	# 		"line_hashtgerd": line_hashtgerd,
-	# 		"line_6": line_6,
-	# 		"line_7": line_7,
-	# 	}
-	# }
-
-	# base_path = Path.cwd() / 'metrogo' / 'data' / 'assets' / 'json'
-
-	# with open(os.path.join(base_path, "stations.json"), "w", encoding="UTF-8") as file:
-	# 	file.write(json.dumps(x, ensure_ascii=False))
 
 
 run()
